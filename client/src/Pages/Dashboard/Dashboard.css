@@ -1,0 +1,9 @@
+.PageDash{
+    display: flex;
+    flex-direction: row;
+
+}
+.Dashboard{
+    padding: 0;
+    text-align: center;
+}

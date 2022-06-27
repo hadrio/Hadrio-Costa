@@ -1,0 +1,8 @@
+.PageDash{
+    display: flex;
+    flex-direction: row;
+}
+.Equipamento{
+    padding: 0;
+    text-align: center;
+}
