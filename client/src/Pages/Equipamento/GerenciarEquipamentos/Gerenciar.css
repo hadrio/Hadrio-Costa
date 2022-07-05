@@ -1,0 +1,10 @@
+.full-page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.hearder{
+    flex: 1;
+    padding: 0;
+    text-align: center;
+}

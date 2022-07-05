@@ -3,8 +3,6 @@ import { useState, useRef, useEffect} from 'react';
 import './Login.css';
 
 
-
-
 const Login = () => {
     const userRef = useRef();
     const errRef = useRef();
@@ -12,7 +10,6 @@ const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errMsg, setErrMsg] = useState('');
-    const [sucess, setSucess] = useState(false);
 
     useEffect(() => {
         userRef.current.focus();
