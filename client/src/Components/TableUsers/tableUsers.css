@@ -1,0 +1,27 @@
+.container{
+    width: 100%;
+    height: 100%;
+}
+.table-page{
+    border: 1px solid;
+    border-collapse: collapse;
+    border-radius: 5px;
+    width: 100%;
+    margin: 1em 0;
+}
+th{
+    width: 1%;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+td{
+    border-bottom: 1px solid;
+    margin: 5px;
+    padding: 5px;
+}
+.btn-table{
+    border: 1px solid  #f0f006;
+    border-radius: 5px;
+    background-color:  #f0f006;
+}

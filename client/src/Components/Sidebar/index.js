@@ -19,7 +19,7 @@ const Sidebar = () => {
                 </li>
                 <li className="item">
                     <div id="icon"><MdDashboard/></div>
-                    <p id="title">Equipamentos</p>
+                    <Link to='/gerenciar' id="title">equipamentos</Link>
                 </li>
                 <li className="item">
                     <div id="icon"><MdOutlineFormatListBulleted/></div>
@@ -43,7 +43,7 @@ const Sidebar = () => {
                 </li>
                 <li className="item">
                     <div id="icon"><FaUser/></div>
-                    <Link to='/GerenciarUsers' id="title">Usuários</Link>
+                    <Link to='/UsersTable' id="title">Usuários</Link>
                 </li>
             </ul>
         </div>

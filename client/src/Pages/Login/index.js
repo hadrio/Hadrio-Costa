@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect} from 'react';
+import jwt_decode from "jwt-decode";
+import Api from '../../api/Api';
 
 import './Login.css';
 
@@ -19,7 +21,11 @@ const Login = () => {
     },[username, password])
  
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault(e)
+        Api.post("/login").then((req,res ) => {
+            setUsername(res.data.username);
+            setPassword(res.data.password)
+        })
        console.log(username,password)
     }
 

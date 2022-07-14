@@ -1,9 +1,8 @@
 import axios from 'axios';
+import { Cookies } from 'react-cookie';
 
-export const Api = axios.create({
+const cookies = new Cookies();
+const Api = axios.create({
     baseURL:'http://localhost:3001'
 });
-
-export const createSession = async (username, password) => {
-    return Api.post('/',{username, password})
-}
+export default Api;

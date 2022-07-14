@@ -1,17 +1,26 @@
 import { useState } from "react";
+import Api from "../../../api/Api";
 import Header from "../../../Components/Hearder";
 import Sidebar from "../../../Components/Sidebar";
 import './GerenciarUsers.css';
 
-const GerenciarUsers = () => {
+const Register = () => {
 
     const [name, setName] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [role, setRole] = useState("");
+    const [userLevel, setUserLevel] = useState("");
 
     const handleSubmit  = async (e) =>{
-        console.log(name,username,password,role);
+        e.preventDefault()
+        Api.post('/register', {
+            name: name,
+            username: username,
+            password: password,
+            userLevel: userLevel
+        }).then((res) =>{
+            console.log(res);
+        })
     }
 
 
@@ -28,7 +37,7 @@ const GerenciarUsers = () => {
                                 className="file" 
                                 method='post'
                                 onSubmit={handleSubmit} 
-                                action="/GerenciarUsers"
+                                action="/register"
                                 >
                                 <input
                                     className="input"
@@ -61,10 +70,10 @@ const GerenciarUsers = () => {
                                     className="input"
                                     required
                                     placeholder="Papel do usuario"
-                                    type='role'
-                                    name='role'
-                                    value={role}
-                                    onChange={(e) => setRole(e.target.value)}
+                                    type='userLevel'
+                                    name='userLevel'
+                                    value={userLevel}
+                                    onChange={(e) => setUserLevel(e.target.value)}
                                 />
                                 <button 
                                     className="input">
@@ -80,5 +89,5 @@ const GerenciarUsers = () => {
 };
 
 
-export default GerenciarUsers;
+export default Register;
 
