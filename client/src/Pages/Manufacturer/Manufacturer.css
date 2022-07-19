@@ -1,0 +1,10 @@
+.page-manufacturer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.manufacturer{
+    flex: 1;
+    padding: 0;
+    text-align: center;
+}

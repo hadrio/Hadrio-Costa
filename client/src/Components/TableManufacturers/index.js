@@ -1,11 +1,11 @@
 import { FiEdit } from "react-icons/fi";
 import { TbX } from "react-icons/tb";
-import './tableEquipments.css';
+import './TableManufacturers.css';
 
-const TableEquipments = ({ dataKeys, data }) => {
+const TableManufacturers = ({ dataKeys, data }) => {
     return (
-        <div className="container-equipments">
-            <table className="table-equipments">
+        <div className="container">
+            <table className="table-page">
                 <thead>
                     <tr>{
                         dataKeys.map(keys => {
@@ -20,14 +20,12 @@ const TableEquipments = ({ dataKeys, data }) => {
                         return (
                             <tr key={data.id}>
                                 <td>{data.id}</td>
-                                <td>{data.tombo}</td>
-                                <td>{data.specifications}</td>
-                                <td>{data.types_equip_id}</td>
+                                <td>{data.name}</td>
                                 <td>
                                     <button className='btn-table'>
                                         <FiEdit />
                                     </button>
-                                    <button className="btn-equipmnets">
+                                    <button className="btn-table">
                                         <TbX />
                                     </button>
                                 </td>
@@ -39,5 +37,4 @@ const TableEquipments = ({ dataKeys, data }) => {
         </div>
     )
 }
-
-export default TableEquipments;
+export default TableManufacturers;

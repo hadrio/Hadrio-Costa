@@ -10,6 +10,7 @@ const Register = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [userLevel, setUserLevel] = useState("");
+    const [status, setStatus] = useState("")
 
     const handleSubmit  = async (e) =>{
         e.preventDefault()
@@ -17,7 +18,8 @@ const Register = () => {
             name: name,
             username: username,
             password: password,
-            userLevel: userLevel
+            userLevel: userLevel,
+            status: status,
         }).then((res) =>{
             console.log(res);
         })
@@ -74,6 +76,15 @@ const Register = () => {
                                     name='userLevel'
                                     value={userLevel}
                                     onChange={(e) => setUserLevel(e.target.value)}
+                                />
+                                <input
+                                    className="input"
+                                    required
+                                    placeholder="Status"
+                                    type='status'
+                                    name='status'
+                                    value={status}
+                                    onChange={(e) => setStatus(e.target.value)}
                                 />
                                 <button 
                                     className="input">

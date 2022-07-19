@@ -23,15 +23,15 @@ const Sidebar = () => {
                 </li>
                 <li className="item">
                     <div id="icon"><MdOutlineFormatListBulleted/></div>
-                    <Link to='/Fabricantes'id="title">Fabricantes</Link>
+                    <Link to='/Manufacturer'id="title">Fabricantes</Link>
                 </li>
                 <li className="item">
                     <div id="icon"><MdOutlineFormatListBulleted/></div>
-                    <Link to='/Setores'id="title">Setores</Link>
+                    <Link to='/Sectors'id="title">Setores</Link>
                 </li>
                 <li className="item">
                     <div id="icon"><MdOutlineFormatListBulleted/></div>
-                    <Link to='/Situacao'id="title">Situação</Link>
+                    <Link to='/Situations'id="title">Situação</Link>
                 </li>
                 <li className="item">
                     <div id="icon"><BiShuffle/></div>
@@ -39,7 +39,7 @@ const Sidebar = () => {
                 </li>
                 <li className="item">
                     <div id="icon"><GoBook/></div>
-                    <Link to='/Relatorios' id="title">Relatórios</Link>
+                    <Link to='/Reports' id="title">Relatórios</Link>
                 </li>
                 <li className="item">
                     <div id="icon"><FaUser/></div>

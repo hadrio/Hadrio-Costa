@@ -26,16 +26,30 @@ const GerenciarEqui = () => {
         }getData();
     },[]);
 
-    return(
+    return (
         <div className="full-page">
-            <Sidebar/>
+            <Sidebar />
             <div className="hearder">
-                <Header/>
+                <Header />
                 <div className="table-equipments">
-                    <TableEquipments
-                        data={data}
-                        dataKeys={cabecalho}
-                    />
+                    <div className="header-table">
+                        <h1 className="title-table">
+                            Todos os equipamentos
+                        </h1>
+                        <button
+                            className="button"
+                            onClick={() => {
+                                navigate("/CrudEquipments");
+                            }}>
+                            Adicionar equipamento
+                        </button>
+                    </div>
+                    <div className="table-box">
+                        <TableEquipments
+                            data={data}
+                            dataKeys={cabecalho}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

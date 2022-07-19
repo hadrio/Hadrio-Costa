@@ -1,0 +1,37 @@
+.page-manufacturer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.manufacturer{
+    flex: 1;
+    padding: 0;
+    text-align: center;
+}
+.scroll{
+    overflow-y: auto;
+    height: 90vh;
+}
+.table-manufacturer{
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    box-shadow: 0px 0px 5px gray;
+    margin: 10px;
+    justify-content: space-between;
+}
+.button{
+    box-shadow: 0px 0px 5px gray;
+    border: none;
+    flex-direction: row;
+    display: flex;
+    flex: 1;
+    margin-left: 600px;
+    margin-right: 30px;
+    width: 10%;
+    height: 20%;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}

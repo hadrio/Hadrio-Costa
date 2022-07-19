@@ -17,15 +17,47 @@ app.post("/register", async (req,res) => {
             username:req.body.username,
             password:req.body.password,
             user_level:req.body.userLevel,
-            status: '1'
+            status: req.body.status
         })
-    return res.end()
+    return res.end();
+})
+
+app.post("/register_equipment", async (req,res) => {
+    console.log(req.body.createdAt)
+    const equipments = await knex('equipments')
+        .insert({
+            tombo: req.body.tombo,
+            specifications: req.body.specifications,
+            obs: req.body.obs,
+            types_equip_id: req.body.typeEquipment,
+            manufacturer_id: req.body.equipManufacturer,
+            situation_id: req.body.equipSituation,
+            created_by:'1',
+            created_at: new Date(),
+        })
+    return res.end();
 })
 
 app.get("/equipments", async(req,res) => {
     const equipments = await knex('equipments').select();
     res.json(equipments)
 })
+
+app.get("/manufacturers", async(req,res) => {
+    const manufacturers = await knex('manufacturers').select();
+    res.json(manufacturers);
+})
+
+app.get("/sectors", async(req,res) => {
+    const sectors = await knex('sectors').select();
+    res.json(sectors);
+})
+
+app.get("/situations", async(req,res) => {
+    const situations = await knex('situations').select();
+    res.json(situations);
+})
+
 
 app.get("/users", async(req,res) => {
     const users = await knex('users').select(

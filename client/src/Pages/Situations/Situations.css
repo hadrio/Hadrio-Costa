@@ -1,0 +1,10 @@
+.page-situations{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.situations{
+    flex: 1;
+    padding: 0;
+    text-align: center;
+}
